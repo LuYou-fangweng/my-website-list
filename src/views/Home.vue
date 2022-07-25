@@ -60,6 +60,7 @@ export default {
 <style lang="scss" scoped>
 .home {
   .topImg {
+    width: 100vw;
     position: relative;
     height: 160px;
     background: no-repeat
@@ -80,7 +81,7 @@ export default {
     }
   }
   .contend {
-    min-height: 500px;
+    // min-height: 500px;
     background-image: linear-gradient(
       rgba(240, 251, 255, 0.842) 0,
       rgba(250, 250, 250, 0) 400px
@@ -95,6 +96,7 @@ export default {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 30px;
+
       .item {
         display: block;
         box-sizing: border-box;
@@ -137,5 +139,19 @@ export default {
       }
     }
   }
+  @media screen  and (max-width:900px){
+  .contend{
+    .webList {
+      width:100%;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      padding: 0px 10px;
+}
+.float{
+  display: none;
+}
+  }
+}
 }
 </style>
